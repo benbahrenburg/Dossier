@@ -36,7 +36,7 @@ var polyfill = {
 				var buffer = Ti.createBuffer({length: 1024});
 				var size = 0;
 				while ((size = instream.read(buffer)) > -1) {
-				  outstream.write(buffer);
+				  outstream.write(buffer, 0, size);
 				}
 				
 				// Cleanup.
